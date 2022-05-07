@@ -24,9 +24,9 @@ export class SubmitFeedbackUseCase {
       throw new Error('Comment is required')
     }
 
-    if (screenshot && !screenshot.startsWith('data:image/png:base64')) {
-      throw new Error('Invalid screenshot format!')
-    }
+    // if (screenshot && !screenshot.startsWith('data:image/png:base64')) {
+    //   throw new Error('Invalid screenshot format!')
+    // }
 
     await this.feedbacksRepository.create({
       type,
@@ -40,6 +40,7 @@ export class SubmitFeedbackUseCase {
         `<div style="font-family: sans-serif; font-size: 16px; color: #222">`,
         `<p>Tipo do feedback: ${type}</p>`,
         `<p>Commentário: ${comment}</p>`,
+        screenshot ? `<img src="${screenshot}" alt="Print">` : '',
         `</div>`
       ].join('\n')
     })
