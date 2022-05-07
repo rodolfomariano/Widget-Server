@@ -15,10 +15,6 @@
 ## :computer: Project
 
 <p>
-  Demo of the project: <a href="https://widget-ten-indol.vercel.app/" target="_blank">Visit!</a>
-</p>
-
-<p>
   Front of the project: <a href="https://github.com/rodolfomariano/Widget" target="_blank">Frontend!</a>
 </p>
 
